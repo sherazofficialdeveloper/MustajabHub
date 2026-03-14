@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp & Booking Automation | Digital Agency</title>
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- External CSS -->
+    <link href="css/index.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <!-- STICKY HEADER (same as homepage) -->
+    <header class="sticky-nav border-b border-gray-100 bg-white/80">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-4 flex items-center justify-between">
+            <!-- left logo placeholder -->
+            <div class="text-2xl font-bold text-indigo-600 tracking-tight">Logo<span class="text-gray-800">.</span></div>
+
+            <!-- right navigation (desktop) -->
+            <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-gray-700">
+                <a href="index.html" class="hover:text-indigo-600 transition">Home</a>
+
+                <!-- Dropdown Freelancing -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 hover:text-indigo-600 transition">Freelancing & Online Income <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="absolute left-0 mt-2 w-56 bg-white border border-gray-100 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-2 px-1">
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Freelancing Skills</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Career & Work Tips</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Online Earning & Side Hustle</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown More Topics -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 hover:text-indigo-600 transition">More Topics <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="absolute left-0 mt-2 w-48 bg-white border border-gray-100 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-2 px-1">
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Tech</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Learning</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Lifestyle</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Money & Business</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Health & Fitness</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown Services -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 hover:text-indigo-600 transition">Services <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-100 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-2 px-1">
+                            <a href="wordpressDev.html" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">WordPress Development & Optimization</a>
+                            <a href="whatsappAuto.html" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">WhatsApp & Booking Automation</a>
+                            <a href="ecommerceGrowth.html" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">E-commerce Growth Setup</a>
+                            <a href="seoService.html" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Technical SEO & Performance Fix</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="hover:text-indigo-600 transition">About Us</a>
+                <a href="contact.html" class="hover:text-indigo-600 transition">Contact</a>
+            </nav>
+
+            <!-- mobile menu icon -->
+            <button class="block lg:hidden text-gray-600 text-xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main class="overflow-hidden">
+
+        <!-- HERO SECTION - Left Image, Right Text -->
+        <section class="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- left image -->
+                <div class="order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1719204718581-5c95889c8ec9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFdoYXRzQXBwJTIwJTI2JTIwQm9va2luZyUyMEF1dG9tYXRpb258ZW58MHx8MHx8fDA%3D" 
+                         alt="WhatsApp automation dashboard on smartphone" 
+                         class="rounded-2xl shadow-soft w-full object-cover border border-gray-100 h-[400px] object-center">
+                </div>
+                <!-- right text -->
+                <div class="order-1 md:order-2">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-900">WhatsApp & <span class="text-indigo-600">Booking Automation</span></h1>
+                    <p class="text-lg text-gray-600 mt-6 max-w-lg">Automate customer communication, appointment bookings, and lead responses using smart WhatsApp automation systems that save time and increase conversions.</p>
+                    <div class="mt-8">
+                        <a href="#" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-7 py-4 rounded-xl shadow-md transition-all"><span>Start Automation Setup</span> <i class="fas fa-arrow-right text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE EXPLANATION - 4 Feature Blocks -->
+        <section class="bg-gray-50 py-20">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center">WhatsApp Automation Solutions</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+                    <!-- card 1 -->
+                    <div class="bg-white p-7 rounded-2xl shadow-soft hover-scale border border-gray-100">
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-xl flex items-center justify-center text-2xl mb-5"><i class="fas fa-comment-dots"></i></div>
+                        <h3 class="text-xl font-semibold">Automated Customer Replies</h3>
+                        <p class="text-gray-600 mt-3 text-sm leading-relaxed">Automatically respond to customer messages instantly using WhatsApp automation.</p>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="bg-white p-7 rounded-2xl shadow-soft hover-scale border border-gray-100">
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-xl flex items-center justify-center text-2xl mb-5"><i class="fas fa-calendar-check"></i></div>
+                        <h3 class="text-xl font-semibold">Appointment Booking System</h3>
+                        <p class="text-gray-600 mt-3 text-sm leading-relaxed">Allow customers to book appointments automatically through WhatsApp chat.</p>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="bg-white p-7 rounded-2xl shadow-soft hover-scale border border-gray-100">
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-xl flex items-center justify-center text-2xl mb-5"><i class="fas fa-user-tag"></i></div>
+                        <h3 class="text-xl font-semibold">Lead Qualification Automation</h3>
+                        <p class="text-gray-600 mt-3 text-sm leading-relaxed">Automatically collect customer information and qualify leads before contacting them.</p>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="bg-white p-7 rounded-2xl shadow-soft hover-scale border border-gray-100">
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-xl flex items-center justify-center text-2xl mb-5"><i class="fas fa-diagram-project"></i></div>
+                        <h3 class="text-xl font-semibold">Business Workflow Automation</h3>
+                        <p class="text-gray-600 mt-3 text-sm leading-relaxed">Connect WhatsApp with CRM tools, forms, and booking systems to automate your business operations.</p>
+                    </div>
+                </div>
+
+                <!-- Feature List -->
+                <div class="mt-16 flex flex-wrap justify-center gap-4 text-sm font-medium">
+                    <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200"><i class="fas fa-check text-indigo-600 mr-2"></i>Automated WhatsApp Replies</span>
+                    <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200"><i class="fas fa-check text-indigo-600 mr-2"></i>Appointment Booking Automation</span>
+                    <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200"><i class="fas fa-check text-indigo-600 mr-2"></i>Lead Capture Systems</span>
+                    <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200"><i class="fas fa-check text-indigo-600 mr-2"></i>Customer Follow-up Automation</span>
+                    <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200"><i class="fas fa-check text-indigo-600 mr-2"></i>CRM Integration</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SECTION - 6 Cards -->
+        <section class="py-20 max-w-7xl mx-auto px-6 md:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center">Automation Projects</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                <!-- card 1 -->
+                <div class="bg-white rounded-2xl shadow-soft border border-gray-100 hover-scale overflow-hidden">
+                    <img src="https://media.istockphoto.com/id/483527227/photo/teamwork-at-the-hair-salon.webp?a=1&b=1&s=612x612&w=0&k=20&c=iPhugOj6lPu_yupHiiJtyTikQ_prc2EgxTnh6NLen5Q=" alt="Salon booking automation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">GlamSalon</h3>
+                        <p class="text-gray-600 text-sm mb-4">WhatsApp appointment booking for 5 salons</p>
+                        <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:underline">View Project <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="bg-white rounded-2xl shadow-soft border border-gray-100 hover-scale overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Real estate lead automation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">Prime Properties</h3>
+                        <p class="text-gray-600 text-sm mb-4">Lead qualification via WhatsApp chatbot</p>
+                        <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:underline">View Project <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="bg-white rounded-2xl shadow-soft border border-gray-100 hover-scale overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Clinic booking system" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">City Medical Center</h3>
+                        <p class="text-gray-600 text-sm mb-4">Patient appointment automation</p>
+                        <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:underline">View Project <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="bg-white rounded-2xl shadow-soft border border-gray-100 hover-scale overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1587560699334-cc4ff634909a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="E-commerce WhatsApp notifications" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">FashionHub</h3>
+                        <p class="text-gray-600 text-sm mb-4">Order updates & support automation</p>
+                        <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:underline">View Project <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- card 5 -->
+                <div class="bg-white rounded-2xl shadow-soft border border-gray-100 hover-scale overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Restaurant reservation system" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">La Piazza</h3>
+                        <p class="text-gray-600 text-sm mb-4">Table reservations via WhatsApp</p>
+                        <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:underline">View Project <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- card 6 -->
+                <div class="bg-white rounded-2xl shadow-soft border border-gray-100 hover-scale overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="CRM integration" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">SalesFlow CRM</h3>
+                        <p class="text-gray-600 text-sm mb-4">WhatsApp-CRM integration</p>
+                        <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:underline">View Project <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION - Marquee Slider (8 cards) -->
+        <section class="bg-gray-50 py-20 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16">What Our Clients Say</h2>
+                
+                <div class="marquee-container">
+                    <div class="marquee-track">
+                        <!-- Card 1 -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1494790108777-3f34cf4e7092?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100" alt="client">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
+                                    <div class="text-amber-400 text-sm mt-1">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">“Our appointment bookings increased by 40% after implementing their WhatsApp automation. Invaluable!”</p>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100" alt="client">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">David Martinez</h4>
+                                    <div class="text-amber-400 text-sm mt-1">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">“The lead qualification bot saves us 15 hours weekly. Best investment for our real estate agency.”</p>
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100" alt="client">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Emily Chen</h4>
+                                    <div class="text-amber-400 text-sm mt-1">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">“Our customers love booking via WhatsApp. So convenient and the automation works flawlessly.”</p>
+                        </div>
+                        
+                        <!-- Card 4 -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100" alt="client">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Michael Thompson</h4>
+                                    <div class="text-amber-400 text-sm mt-1">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">“CRM integration was seamless. Now all WhatsApp chats sync automatically. Game changer.”</p>
+                        </div>
+                        
+                        <!-- Card 5 -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100" alt="client">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Jessica Williams</h4>
+                                    <div class="text-amber-400 text-sm mt-1">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">“The follow-up automation recovered 30% of lost leads. Highly recommend their team.”</p>
+                        </div>
+                        
+                        <!-- Card 6 -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100" alt="client">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Robert Chen</h4>
+                                    <div class="text-amber-400 text-sm mt-1">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">“Setup was quick and the support team trained our staff perfectly. Worth every penny.”</p>
+                        </div>
+                        
+                        <!-- Card 7 -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100" alt="client">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Amanda Foster</h4>
+                                    <div class="text-amber-400 text-sm mt-1">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">“Our spa's booking rate tripled. Customers love the easy WhatsApp option.”</p>
+                        </div>
+                        
+                        <!-- Card 8 -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100" alt="client">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">James Wilson</h4>
+                                    <div class="text-amber-400 text-sm mt-1">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">“Automated responses work 24/7. We never miss a customer inquiry now.”</p>
+                        </div>
+                        
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1494790108777-3f34cf4e7092?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100" alt="client">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
+                                    <div class="text-amber-400 text-sm mt-1">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">“Our appointment bookings increased by 40% after implementing their WhatsApp automation. Invaluable!”</p>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100" alt="client">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">David Martinez</h4>
+                                    <div class="text-amber-400 text-sm mt-1">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">“The lead qualification bot saves us 15 hours weekly. Best investment for our real estate agency.”</p>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100" alt="client">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Emily Chen</h4>
+                                    <div class="text-amber-400 text-sm mt-1">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">“Our customers love booking via WhatsApp. So convenient and the automation works flawlessly.”</p>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100" alt="client">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Michael Thompson</h4>
+                                    <div class="text-amber-400 text-sm mt-1">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">“CRM integration was seamless. Now all WhatsApp chats sync automatically. Game changer.”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION SECTION -->
+        <section class="bg-indigo-600 py-20 text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Ready to Automate Your Customer Communication?</h2>
+                <p class="text-indigo-100 text-lg mt-4">Start using WhatsApp automation to save time and increase customer engagement.</p>
+                <div class="mt-10">
+                    <a href="#" class="inline-flex bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl shadow-xl hover:bg-gray-100 transition-all">Start Your Project <i class="fas fa-arrow-right ml-3"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (same as homepage) -->
+    <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+        <!-- social icons above footer columns -->
+        <div class="max-w-7xl mx-auto px-6 md:px-8 flex justify-center space-x-6 text-gray-500 text-xl mb-12">
+            <a href="#" class="hover:text-indigo-600 transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-indigo-600 transition"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-indigo-600 transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-indigo-600 transition"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- col 1: Popular Posts -->
+            <div>
+                <h4 class="font-semibold text-gray-900 mb-4">Popular Posts</h4>
+                <ul class="space-y-3 text-sm text-gray-600">
+                    <li><a href="#" class="hover:text-indigo-600">WhatsApp Business API Guide</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Top 10 Automation Tools</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">How to Set Up Booking Bots</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">CRM Integration Tips</a></li>
+                </ul>
+            </div>
+            <!-- col 2: Useful Information -->
+            <div>
+                <h4 class="font-semibold text-gray-900 mb-4">Useful Information</h4>
+                <ul class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                    <li><a href="#" class="hover:text-indigo-600">Tech</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Lifestyle</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Health & Fitness</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Online Learning</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Money & Business</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">About Us</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Contact</a></li>
+                </ul>
+            </div>
+            <!-- col 3: Contact Info -->
+            <div>
+                <h4 class="font-semibold text-gray-900 mb-4">Contact Info</h4>
+                <ul class="space-y-3 text-sm text-gray-600">
+                    <li><i class="fas fa-map-marker-alt w-6 text-indigo-500 inline-block"></i> 123 Digital Lane, SF</li>
+                    <li><i class="fas fa-phone-alt w-6 text-indigo-500 inline-block"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope w-6 text-indigo-500 inline-block"></i> hello@agency.dev</li>
+                    <li><i class="fas fa-globe w-6 text-indigo-500 inline-block"></i> www.yoursite.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- bottom copyright -->
+        <div class="max-w-7xl mx-auto px-6 md:px-8 mt-16 pt-6 border-t border-gray-100 flex flex-col md:flex-row justify-between text-sm text-gray-500">
+            <span>© 2025 Your Agency. All rights reserved.</span>
+            <div class="space-x-5 mt-3 md:mt-0">
+                <a href="#" class="hover:text-indigo-600">Terms & Conditions</a>
+                <a href="#" class="hover:text-indigo-600">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JS -->
+    <script src="js/index.js"></script>
+</body>
+</html>

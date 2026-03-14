@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E‑commerce Growth Setup | DigiPro</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS (index.css) – contains all global styles, marquee, animations -->
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-soft-gray text-gray-800 antialiased">
+
+    <!-- STICKY HEADER (same as homepage) -->
+    <header class="sticky-nav border-b border-gray-100 bg-white/80">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-4 flex items-center justify-between">
+            <!-- left logo placeholder -->
+            <div class="text-2xl font-bold text-indigo-600 tracking-tight">Logo<span class="text-gray-800">.</span></div>
+
+            <!-- right navigation (desktop) -->
+            <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-gray-700">
+                <a href="index.html" class="hover:text-indigo-600 transition">Home</a>
+
+                <!-- Dropdown Freelancing -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 hover:text-indigo-600 transition">Freelancing & Online Income <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="absolute left-0 mt-2 w-56 bg-white border border-gray-100 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-2 px-1">
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Freelancing Skills</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Career & Work Tips</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Online Earning & Side Hustle</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown More Topics -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 hover:text-indigo-600 transition">More Topics <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="absolute left-0 mt-2 w-48 bg-white border border-gray-100 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-2 px-1">
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Tech</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Learning</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Lifestyle</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Money & Business</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Health & Fitness</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown Services -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 hover:text-indigo-600 transition">Services <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-100 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-2 px-1">
+                            <a href="wordpressDev.html" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">WordPress Development & Optimization</a>
+                            <a href="whatsappAuto.html" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">WhatsApp & Booking Automation</a>
+                            <a href="ecommerceGrowth.html" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">E-commerce Growth Setup</a>
+                            <a href="seoService.html" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Technical SEO & Performance Fix</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="hover:text-indigo-600 transition">About Us</a>
+                <a href="contact.html" class="hover:text-indigo-600 transition">Contact</a>
+            </nav>
+
+            <!-- mobile menu icon -->
+            <button class="block lg:hidden text-gray-600 text-xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION (image left / text right) -->
+        <section class="container mx-auto px-4 md:px-6 py-12 md:py-16 flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <div class="rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center h-64 md:h-80">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1688561808434-886a6dd97b8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWNvbW1lcmNlfGVufDB8fDB8fHww" alt="Ecommerce dashboard">
+                </div>
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-800">
+                    <span class="text-blue-600">E‑commerce</span> <span class="text-teal-500">Growth</span> Setup
+                </h1>
+                <p class="mt-4 text-lg text-gray-600 max-w-lg mx-auto md:mx-0">
+                    We help businesses launch and scale online stores with optimized product pages, high-converting checkout systems, and growth focused ecommerce strategies.
+                </p>
+                <div class="mt-8">
+                    <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition">Start Your Online Store</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE EXPLANATION / 4 FEATURE BLOCKS (2-col layout) -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4 md:px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Everything you need to <span class="text-teal-500">scale</span></h2>
+                <p class="text-center text-gray-500 max-w-2xl mx-auto mb-16">We build ecommerce experiences that convert visitors into loyal customers.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Feature 1 -->
+                    <div class="bg-soft-gray rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition">
+                        <i class="fas fa-store text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Online Store Setup</h3>
+                        <p class="text-gray-600 leading-relaxed">We build fully functional ecommerce websites with modern design and smooth shopping experiences, from product catalog to secure payments.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-soft-gray rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition">
+                        <i class="fas fa-image text-4xl text-teal-500 mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Product Page Optimization</h3>
+                        <p class="text-gray-600 leading-relaxed">Improve product page design, images, and content to increase conversions and help customers make confident buying decisions.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-soft-gray rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition">
+                        <i class="fas fa-shopping-cart text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Checkout Optimization</h3>
+                        <p class="text-gray-600 leading-relaxed">Optimize the checkout process to reduce cart abandonment and increase sales through frictionless payment and guest checkout options.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="bg-soft-gray rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition">
+                        <i class="fas fa-tachometer-alt text-4xl text-teal-500 mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Store Performance Optimization</h3>
+                        <p class="text-gray-600 leading-relaxed">Improve loading speed and performance for better user experience and SEO. Fast stores rank higher and convert better.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURE LIST (bullet list style) -->
+        <section class="bg-soft-gray py-16">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-md p-8 md:p-10">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">What's included in our <span class="text-blue-600">E‑commerce Growth</span> package</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg">
+                        <div class="flex items-center gap-3"><i class="fas fa-check-circle text-teal-500 text-xl"></i> <span>Complete Online Store Setup</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-check-circle text-teal-500 text-xl"></i> <span>Product Page Optimization</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-check-circle text-teal-500 text-xl"></i> <span>Conversion Focused Design</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-check-circle text-teal-500 text-xl"></i> <span>Checkout Optimization</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-check-circle text-teal-500 text-xl"></i> <span>Store Speed Optimization</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-check-circle text-teal-500 text-xl"></i> <span>Mobile‑first responsive design</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SECTION (6 ecommerce project cards) -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4 md:px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">E‑commerce <span class="text-teal-500">success</span> stories</h2>
+                <p class="text-center text-gray-500 max-w-2xl mx-auto mb-12">Real projects that delivered measurable growth.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition portfolio-card">
+                        <div class="h-48 bg-gradient-to-tr from-blue-50 to-teal-50 overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fashion store">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Urban Fashion</h3>
+                            <p class="text-sm text-gray-500 mb-3">Clothing / WooCommerce</p>
+                            <a href="#" class="text-blue-600 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all">View project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition portfolio-card">
+                        <div class="h-48 bg-gradient-to-tr from-blue-50 to-teal-50 overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Electronics store">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">GadgetHub</h3>
+                            <p class="text-sm text-gray-500 mb-3">Electronics / Shopify</p>
+                            <a href="#" class="text-blue-600 text-sm font-medium flex items-center gap-1 hover:gap-2">View project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition portfolio-card">
+                        <div class="h-48 bg-gradient-to-tr from-blue-50 to-teal-50 overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home decor">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Modern Nest</h3>
+                            <p class="text-sm text-gray-500 mb-3">Home & Living / Magento</p>
+                            <a href="#" class="text-blue-600 text-sm font-medium flex items-center gap-1 hover:gap-2">View project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition portfolio-card">
+                        <div class="h-48 bg-gradient-to-tr from-blue-50 to-teal-50 overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Organic food">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">FarmDirect</h3>
+                            <p class="text-sm text-gray-500 mb-3">Groceries / Custom</p>
+                            <a href="#" class="text-blue-600 text-sm font-medium flex items-center gap-1 hover:gap-2">View project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition portfolio-card">
+                        <div class="h-48 bg-gradient-to-tr from-blue-50 to-teal-50 overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beauty products">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Glow Beauty</h3>
+                            <p class="text-sm text-gray-500 mb-3">Cosmetics / BigCommerce</p>
+                            <a href="#" class="text-blue-600 text-sm font-medium flex items-center gap-1 hover:gap-2">View project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition portfolio-card">
+                        <div class="h-48 bg-gradient-to-tr from-blue-50 to-teal-50 overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sports gear">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">FitGear</h3>
+                            <p class="text-sm text-gray-500 mb-3">Sports / Shopify</p>
+                            <a href="#" class="text-blue-600 text-sm font-medium flex items-center gap-1 hover:gap-2">View project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION (horizontal marquee) -->
+        <section class="bg-soft-gray py-16 overflow-hidden">
+            <div class="container mx-auto px-4 md:px-6 mb-8">
+                <h2 class="text-3xl font-bold text-center text-gray-800">What our <span class="text-teal-500">clients</span> say</h2>
+            </div>
+            <div class="flex gap-6 marquee-inline">
+                <!-- 10 testimonial cards (with images) -->
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center overflow-hidden"><i class="fas fa-user text-blue-500"></i></div>
+                        <div><h4 class="font-semibold">Laura Chen</h4><div class="text-yellow-400 text-xs">★★★★★</div></div>
+                    </div>
+                    <p class="text-sm text-gray-600 break-words">“Our sales increased by 150% after they optimized our product pages and checkout flow.”</p>
+                </div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center overflow-hidden"><i class="fas fa-user text-teal-500"></i></div>
+                        <div><h4 class="font-semibold">Marcus Webb</h4><div class="text-yellow-400 text-xs">★★★★★</div></div>
+                    </div>
+                    <p class="text-sm text-gray-600 break-words">“They built our store from scratch and it's lightning fast. Conversions went up 40%.”</p>
+                </div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center overflow-hidden"><i class="fas fa-user text-blue-500"></i></div>
+                        <div><h4 class="font-semibold">Sophia Reed</h4><div class="text-yellow-400 text-xs">★★★★★</div></div>
+                    </div>
+                    <p class="text-sm text-gray-600 break-words">“Checkout abandonment dropped by 25% after their optimization. Highly recommend!”</p>
+                </div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center overflow-hidden"><i class="fas fa-user text-teal-500"></i></div>
+                        <div><h4 class="font-semibold">James Kim</h4><div class="text-yellow-400 text-xs">★★★★★</div></div>
+                    </div>
+                    <p class="text-sm text-gray-600 break-words">“They helped us migrate to a faster platform and sales have never been better.”</p>
+                </div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center overflow-hidden"><i class="fas fa-user text-blue-500"></i></div>
+                        <div><h4 class="font-semibold">Nina Patel</h4><div class="text-yellow-400 text-xs">★★★★★</div></div>
+                    </div>
+                    <p class="text-sm text-gray-600 break-words">“Professional, fast, and our store looks amazing. Customer support is top notch.”</p>
+                </div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center overflow-hidden"><i class="fas fa-user text-teal-500"></i></div>
+                        <div><h4 class="font-semibold">Carlos M.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div>
+                    </div>
+                    <p class="text-sm text-gray-600 break-words">“Page speed went from 45 to 95 on mobile. Conversions improved dramatically.”</p>
+                </div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center overflow-hidden"><i class="fas fa-user text-blue-500"></i></div>
+                        <div><h4 class="font-semibold">Olivia T.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div>
+                    </div>
+                    <p class="text-sm text-gray-600 break-words">“They optimized our entire catalog and we're ranking #1 for our main keywords.”</p>
+                </div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center overflow-hidden"><i class="fas fa-user text-teal-500"></i></div>
+                        <div><h4 class="font-semibold">Daniel Lee</h4><div class="text-yellow-400 text-xs">★★★★★</div></div>
+                    </div>
+                    <p class="text-sm text-gray-600 break-words">“The team delivered beyond expectations. Our revenue doubled in 6 months.”</p>
+                </div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center overflow-hidden"><i class="fas fa-user text-blue-500"></i></div>
+                        <div><h4 class="font-semibold">Priya K.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div>
+                    </div>
+                    <p class="text-sm text-gray-600 break-words">“Smooth project management and excellent communication. Store works perfectly.”</p>
+                </div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center overflow-hidden"><i class="fas fa-user text-teal-500"></i></div>
+                        <div><h4 class="font-semibold">Ahmed Hassan</h4><div class="text-yellow-400 text-xs">★★★★★</div></div>
+                    </div>
+                    <p class="text-sm text-gray-600 break-words">“They truly understand ecommerce. Our average order value increased by 30%.”</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION SECTION -->
+        <section class="bg-gradient-to-r from-blue-50 to-teal-50 py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Ready to Launch Your Online Store?</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">Let us help you build and grow a high-performing ecommerce business.</p>
+                <a href="#" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-medium py-3 px-10 rounded-full shadow-md transition">Start Your Project</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (same as homepage, with 3 columns) -->
+    <footer class="bg-white border-t border-gray-200 pt-12 pb-6">
+        <div class="container mx-auto px-4 md:px-6">
+            <!-- social icons -->
+            <div class="flex justify-center space-x-5 text-gray-500 mb-10">
+                <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-teal-500"><i class="fab fa-linkedin-in text-xl"></i></a>
+                <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-600">
+                <!-- Column 1: Popular Posts -->
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4">Popular Posts</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-600">10 WordPress speed tips</a></li>
+                        <li><a href="#" class="hover:text-blue-600">WhatsApp for business 2025</a></li>
+                        <li><a href="#" class="hover:text-blue-600">E‑commerce SEO guide</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Why site security matters</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2: Useful Information -->
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4">Useful Information</h4>
+                    <ul class="grid grid-cols-2 gap-x-4 gap-y-2">
+                        <li><a href="#" class="hover:text-blue-600">Tech</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Lifestyle</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Health & Fitness</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Online Learning</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Money & Business</a></li>
+                        <li><a href="#" class="hover:text-blue-600">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Contact Info -->
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4">Contact Info</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt w-5 text-blue-500 mt-1"></i> 123 Business Ave, Suite 100</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-phone-alt w-5 text-teal-500"></i> +1 (555) 123-4567</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-envelope w-5 text-blue-500"></i> hello@digipro.demo</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-globe w-5 text-teal-500"></i> www.digipro.demo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- footer bottom -->
+            <div class="border-t border-gray-100 mt-12 pt-6 flex flex-col sm:flex-row justify-between text-xs text-gray-500">
+                <span>© 2025 DigiPro. All rights reserved.</span>
+                <div class="flex gap-5 mt-2 sm:mt-0">
+                    <a href="#" class="hover:text-blue-600">Terms & Conditions</a>
+                    <a href="#" class="hover:text-blue-600">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to global index.js (contains marquee, animations, mobile menu, etc.) -->
+    <script src="/js/index.js"></script>
+</body>
+</html>

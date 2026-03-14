@@ -1,0 +1,1314 @@
+/* ===== BASE STYLES ===== */
+:root {
+  --soft-gray: #f8fafc;
+  --blue-600: #2563eb;
+  --teal-500: #14b8a6;
+  --transition-default: all 0.3s ease;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--soft-gray);
+  overflow-x: hidden;
+}
+
+.bg-soft-gray {
+  background-color: var(--soft-gray);
+}
+
+/* ===== HEADER & DROPDOWN STYLES ===== */
+.dropdown-menu {
+  transform-origin: top;
+  animation: dropdownFade 0.2s ease;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile menu improvements */
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
+
+/* ===== SERVICE CARDS ===== */
+.service-card {
+  transition: var(--transition-default);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== SERVICE SHOWCASE SECTIONS ===== */
+.service-showcase {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.service-showcase.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Alternate fade-in delays for visual interest */
+.service-showcase:nth-child(odd).visible {
+  transition-delay: 0.1s;
+}
+
+.service-showcase:nth-child(even).visible {
+  transition-delay: 0.2s;
+}
+
+/* ===== TESTIMONIAL MARQUEE ===== */
+.marquee-inline {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+  padding-left: 1.5rem;
+  gap: 1.5rem;
+}
+
+.marquee-inline:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Duplicate the testimonial cards for seamless marquee */
+.marquee-inline .testimonial-card {
+  flex-shrink: 0;
+  width: 18rem; /* 72 * 4 = 288px */
+  transition: var(--transition-default);
+}
+
+.marquee-inline .testimonial-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure text wraps properly */
+.testimonial-card p {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* ===== PORTFOLIO CARDS ===== */
+.portfolio-card {
+  transition: var(--transition-default);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+}
+
+.portfolio-card .project-image {
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* ===== CTA BUTTON STYLES ===== */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: height 0.3s ease;
+  z-index: -1;
+}
+
+.cta-button:hover::after {
+  height: 100%;
+}
+
+/* ===== FOOTER LINK HOVER EFFECTS ===== */
+.footer-link {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, var(--blue-600), var(--teal-500));
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* ===== IMAGE STYLES ===== */
+.service-image {
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.service-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+/* ===== SCROLL REVEAL ANIMATIONS ===== */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay classes for staggered animations */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 640px) {
+  .marquee-inline {
+    animation-duration: 20s; /* Faster on mobile */
+  }
+  
+  .testimonial-card {
+    width: 16rem; /* Slightly smaller on mobile */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .service-showcase {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .testimonial-card {
+    width: 20rem;
+  }
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--blue-600), var(--teal-500));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-600);
+}
+
+/* ===== LOADING ANIMATION FOR IMAGES ===== */
+.image-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ===== ACTIVE NAVIGATION LINK ===== */
+.nav-link.active {
+  color: var(--blue-600);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue-600), var(--teal-500));
+}
+
+/* ===== DROPDOWN ARROW ROTATION ===== */
+.group:hover .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.fa-chevron-down {
+  transition: transform 0.3s ease;
+}
+
+/* ===== BUTTON HOVER EFFECT ===== */
+.hover-gap:hover {
+  gap: 0.75rem;
+}
+
+.hover-gap {
+  transition: gap 0.3s ease;
+}
+
+/* ===== UNSWATCHED IMAGE PLACEHOLDER STYLES ===== */
+img:not([src]), 
+img[src=""] {
+  display: none;
+}
+
+/* ===== ACCESSIBILITY FOCUS STYLES ===== */
+a:focus-visible, 
+button:focus-visible {
+  outline: 2px solid var(--blue-600);
+  outline-offset: 2px;
+}
+
+/* ===== PRINt STYLES ===== */
+@media print {
+  .sticky {
+    position: relative;
+  }
+  
+  .marquee-inline {
+    animation: none;
+    flex-wrap: wrap;
+  }
+}
+
+/*    wordpress developmetn */
+/* ===== GLOBAL STYLES ===== */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Utility classes */
+.shadow-soft {
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.05), 0 8px 15px -6px rgba(0,0,0,0.02);
+}
+
+.hover-scale {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-scale:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
+}
+
+/* Sticky header */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255,0.85);
+}
+
+/* ===== TESTIMONIAL MARQUEE STYLES ===== */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 1.5rem;
+    animation: scroll 40s linear infinite;
+    width: fit-content;
+}
+
+/* Pause on hover */
+.marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 0.75rem)); /* half width minus half gap */
+    }
+}
+
+/* Testimonial card styles */
+.testimonial-card {
+    width: 320px;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.05), 0 8px 15px -6px rgba(0,0,0,0.02);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
+}
+
+.testimonial-card p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 640px) {
+    .testimonial-card {
+        width: 280px;
+        padding: 1.25rem;
+    }
+    
+    .marquee-track {
+        gap: 1rem;
+        animation-duration: 30s;
+    }
+}
+
+/* ===== DROPDOWN ANIMATIONS ===== */
+.group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+    visibility: visible;
+}
+
+.group:hover .group-hover\:visible {
+    visibility: visible;
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+   /* whatsappp */
+   /* ===== GLOBAL STYLES ===== */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Utility classes */
+.shadow-soft {
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.05), 0 8px 15px -6px rgba(0,0,0,0.02);
+}
+
+.hover-scale {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-scale:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
+}
+
+/* Sticky header */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255,0.85);
+}
+
+/* ===== TESTIMONIAL MARQUEE STYLES ===== */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 1.5rem;
+    animation: scroll 40s linear infinite;
+    width: fit-content;
+}
+
+/* Pause on hover */
+.marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 0.75rem)); /* half width minus half gap */
+    }
+}
+
+/* Testimonial card styles */
+.testimonial-card {
+    width: 320px;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.05), 0 8px 15px -6px rgba(0,0,0,0.02);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
+}
+
+.testimonial-card p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 640px) {
+    .testimonial-card {
+        width: 280px;
+        padding: 1.25rem;
+    }
+    
+    .marquee-track {
+        gap: 1rem;
+        animation-duration: 30s;
+    }
+}
+
+/* ===== DROPDOWN ANIMATIONS ===== */
+.group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+    visibility: visible;
+}
+
+.group:hover .group-hover\:visible {
+    visibility: visible;
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}  
+   /* ecommerce */
+   /* ===== BASE STYLES ===== */
+:root {
+  --soft-gray: #f8fafc;
+  --blue-600: #2563eb;
+  --teal-500: #14b8a6;
+  --transition-default: all 0.3s ease;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--soft-gray);
+  overflow-x: hidden;
+}
+
+.bg-soft-gray {
+  background-color: var(--soft-gray);
+}
+
+/* ===== HEADER & DROPDOWN STYLES ===== */
+.dropdown-menu {
+  transform-origin: top;
+  animation: dropdownFade 0.2s ease;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
+
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+/* ===== SERVICE CARDS ===== */
+.service-card {
+  transition: var(--transition-default);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== SERVICE SHOWCASE SECTIONS ===== */
+.service-showcase {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.service-showcase.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Alternate fade-in delays */
+.service-showcase:nth-child(odd).visible {
+  transition-delay: 0.1s;
+}
+
+.service-showcase:nth-child(even).visible {
+  transition-delay: 0.2s;
+}
+
+/* ===== TESTIMONIAL MARQUEE ===== */
+.marquee-inline {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+  padding-left: 1.5rem;
+  gap: 1.5rem;
+}
+
+.marquee-inline:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-inline .testimonial-card {
+  flex-shrink: 0;
+  width: 18rem;
+  transition: var(--transition-default);
+}
+
+.marquee-inline .testimonial-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* ===== PORTFOLIO CARDS ===== */
+.portfolio-card {
+  transition: var(--transition-default);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+}
+
+.portfolio-card .project-image {
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* ===== CTA BUTTON STYLES ===== */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: height 0.3s ease;
+  z-index: -1;
+}
+
+.cta-button:hover::after {
+  height: 100%;
+}
+
+/* ===== FOOTER LINK HOVER EFFECTS ===== */
+.footer-link {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, var(--blue-600), var(--teal-500));
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* ===== IMAGE STYLES ===== */
+.service-image {
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.service-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+/* ===== SCROLL REVEAL ANIMATIONS ===== */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 640px) {
+  .marquee-inline {
+    animation-duration: 20s;
+  }
+  
+  .testimonial-card {
+    width: 16rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .service-showcase {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .testimonial-card {
+    width: 20rem;
+  }
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--blue-600), var(--teal-500));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-600);
+}
+
+/* ===== LOADING ANIMATION FOR IMAGES ===== */
+.image-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ===== ACTIVE NAVIGATION LINK ===== */
+.nav-link.active {
+  color: var(--blue-600);
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue-600), var(--teal-500));
+}
+
+/* ===== DROPDOWN ARROW ROTATION ===== */
+.group:hover .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.fa-chevron-down {
+  transition: transform 0.3s ease;
+}
+
+/* ===== BUTTON HOVER EFFECT ===== */
+.hover-gap:hover {
+  gap: 0.75rem;
+}
+
+.hover-gap {
+  transition: gap 0.3s ease;
+}
+
+/* ===== ACCESSIBILITY FOCUS STYLES ===== */
+a:focus-visible, 
+button:focus-visible {
+  outline: 2px solid var(--blue-600);
+  outline-offset: 2px;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .sticky {
+    position: relative;
+  }
+  
+  .marquee-inline {
+    animation: none;
+    flex-wrap: wrap;
+  }
+}
+
+   /* seo page */
+   /* ===== BASE STYLES ===== */
+:root {
+  --soft-gray: #f8fafc;
+  --blue-600: #2563eb;
+  --teal-500: #14b8a6;
+  --transition-default: all 0.3s ease;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--soft-gray);
+  overflow-x: hidden;
+}
+
+.bg-soft-gray {
+  background-color: var(--soft-gray);
+}
+
+/* ===== HEADER & DROPDOWN STYLES ===== */
+.dropdown-menu {
+  transform-origin: top;
+  animation: dropdownFade 0.2s ease;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
+
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+/* ===== SERVICE CARDS ===== */
+.service-card {
+  transition: var(--transition-default);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== SERVICE SHOWCASE SECTIONS ===== */
+.service-showcase {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.service-showcase.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Alternate fade-in delays */
+.service-showcase:nth-child(odd).visible {
+  transition-delay: 0.1s;
+}
+
+.service-showcase:nth-child(even).visible {
+  transition-delay: 0.2s;
+}
+
+/* ===== TESTIMONIAL MARQUEE ===== */
+.marquee-inline {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+  padding-left: 1.5rem;
+  gap: 1.5rem;
+}
+
+.marquee-inline:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-inline .testimonial-card {
+  flex-shrink: 0;
+  width: 18rem;
+  transition: var(--transition-default);
+}
+
+.marquee-inline .testimonial-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* ===== PORTFOLIO CARDS ===== */
+.portfolio-card {
+  transition: var(--transition-default);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+}
+
+.portfolio-card .project-image {
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* ===== CTA BUTTON STYLES ===== */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: height 0.3s ease;
+  z-index: -1;
+}
+
+.cta-button:hover::after {
+  height: 100%;
+}
+
+/* ===== FOOTER LINK HOVER EFFECTS ===== */
+.footer-link {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, var(--blue-600), var(--teal-500));
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* ===== IMAGE STYLES ===== */
+.service-image {
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.service-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+/* ===== SCROLL REVEAL ANIMATIONS ===== */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 640px) {
+  .marquee-inline {
+    animation-duration: 20s;
+  }
+  
+  .testimonial-card {
+    width: 16rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .service-showcase {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .testimonial-card {
+    width: 20rem;
+  }
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--blue-600), var(--teal-500));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-600);
+}
+
+/* ===== LOADING ANIMATION FOR IMAGES ===== */
+.image-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ===== ACTIVE NAVIGATION LINK ===== */
+.nav-link.active {
+  color: var(--blue-600);
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue-600), var(--teal-500));
+}
+
+/* ===== DROPDOWN ARROW ROTATION ===== */
+.group:hover .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.fa-chevron-down {
+  transition: transform 0.3s ease;
+}
+
+/* ===== BUTTON HOVER EFFECT ===== */
+.hover-gap:hover {
+  gap: 0.75rem;
+}
+
+.hover-gap {
+  transition: gap 0.3s ease;
+}
+
+/* ===== ACCESSIBILITY FOCUS STYLES ===== */
+a:focus-visible, 
+button:focus-visible {
+  outline: 2px solid var(--blue-600);
+  outline-offset: 2px;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .sticky {
+    position: relative;
+  }
+  
+  .marquee-inline {
+    animation: none;
+    flex-wrap: wrap;
+  }
+}
+
+/* ===== SEO-SPECIFIC STYLES (NEW) ===== */
+/* Feature blocks with gradient borders */
+.feature-block {
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: var(--transition-default);
+  overflow: hidden;
+}
+
+.feature-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue-600), var(--teal-500));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.feature-block:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Speed meter animation for SEO section */
+.speed-meter {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.speed-meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue-600), var(--teal-500));
+  width: 0%;
+  transition: width 1.5s ease;
+}
+
+.speed-meter-fill.visible {
+  width: 95%;
+}
+
+/* Stats counter for SEO results */
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--blue-600), var(--teal-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* SEO score cards */
+.score-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.score-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--blue-600);
+}
+
+.score-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Performance graph placeholder */
+.graph-placeholder {
+  background: linear-gradient(135deg, #e0f2fe 0%, #ccfbf1 100%);
+  height: 200px;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.graph-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: rgba(37, 99, 235, 0.1);
+  clip-path: polygon(0% 100%, 10% 70%, 20% 85%, 30% 50%, 40% 65%, 50% 30%, 60% 45%, 70% 20%, 80% 35%, 90% 10%, 100% 0%, 100% 100%);
+}

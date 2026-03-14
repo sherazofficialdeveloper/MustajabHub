@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiPro — digital services</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS (index.css) -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-soft-gray text-gray-800 antialiased">
+
+    <!-- STICKY HEADER (unchanged) -->
+    <header class="sticky-nav border-b border-gray-100 bg-white/80">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
+            <!-- left logo placeholder -->
+            <div class="text-2xl font-bold text-indigo-600 tracking-tight"><img src="image.png" class="w-48 h-28" alt=""></div>
+
+            <!-- right navigation (desktop) -->
+            <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-gray-700">
+                <a href="index.html" class="hover:text-indigo-600 transition">Home</a>
+
+                <!-- Dropdown Freelancing -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 hover:text-indigo-600 transition">Freelancing & Online Income <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="absolute left-0 mt-2 w-56 bg-white border border-gray-100 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-2 px-1">
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Freelancing Skills</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Career & Work Tips</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Online Earning & Side Hustle</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown More Topics -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 hover:text-indigo-600 transition">More Topics <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="absolute left-0 mt-2 w-48 bg-white border border-gray-100 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-2 px-1">
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Tech</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Learning</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Lifestyle</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Money & Business</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Health & Fitness</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown Services -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 hover:text-indigo-600 transition">Services <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-100 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-2 px-1">
+                            <a href="wordpressDev.html" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">WordPress Development & Optimization</a>
+                            <a href="whatsappAuto.html" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">WhatsApp & Booking Automation</a>
+                            <a href="ecommerceGrowth.html" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">E-commerce Growth Setup</a>
+                            <a href="seoService.html" class="block px-4 py-2 text-sm hover:bg-indigo-50 rounded-lg">Technical SEO & Performance Fix</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="hover:text-indigo-600 transition">About Us</a>
+                <a href="contact.html" class="hover:text-indigo-600 transition">Contact</a>
+            </nav>
+
+            <!-- mobile menu icon -->
+            <button class="block lg:hidden text-gray-600 text-xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ========= EXISTING WORDPRESS SERVICE SECTION (kept exactly as reference) ========= -->
+        <section class="bg-white py-12 md:py-16">
+            <div class="container mx-auto px-4 md:px-6">
+                <!-- WordPress Development & Optimization (image left, text right) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div class="order-1 md:order-1">
+                        <div class="rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center h-64 md:h-80">
+                            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1678341859828-bfb1a2bd527a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29yZHByZXNzJTIwd2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="WordPress development">
+                        </div>
+                    </div>
+                    <div class="order-2 md:order-2">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                            <span class="text-blue-600">WordPress</span> <span class="text-teal-500">Development</span> & Optimization
+                        </h1>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">We create fast, secure, and SEO-optimized WordPress websites designed for performance and scalability. From custom themes to advanced plugins, we ensure your site stands out.</p>
+                        <a href="wordpressDev.html" class="inline-flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all border border-blue-200 rounded-full px-6 py-2 hover:bg-blue-50">Learn More <i class="fas fa-arrow-right text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= NEW SERVICE 2: WhatsApp & Booking Automation (text left, image right) ========= -->
+        <section class="bg-soft-gray py-12 md:py-16">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <!-- text left (order-2 on mobile? we want text first on mobile: image top, text below. So mobile: image first (order-1), text second (order-2). On desktop: text left (order-1), image right (order-2) -->
+                    <div class="order-2 md:order-1">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                            <span class="text-blue-600">WhatsApp</span> <span class="text-teal-500">& Booking</span> Automation
+                        </h1>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">Automate customer conversations, appointment bookings, and lead responses using advanced WhatsApp automation systems that save time and increase conversions.</p>
+                        <a href="whatsappAuto.html" class="inline-flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all border border-blue-200 rounded-full px-6 py-2 hover:bg-blue-50">Learn More <i class="fas fa-arrow-right text-sm"></i></a>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div class="rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center h-64 md:h-80">
+                            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1719204718581-5c95889c8ec9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFdoYXRzQXBwJTIwJTI2JTIwQm9va2luZyUyMEF1dG9tYXRpb258ZW58MHx8MHx8fDA%3D" alt="WhatsApp automation dashboard">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= NEW SERVICE 3: E-commerce Growth Setup (image left, text right) ========= -->
+        <section class="bg-white py-12 md:py-16">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div class="order-1 md:order-1">
+                        <div class="rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center h-64 md:h-80">
+                            <img class="w-full h-full object-cover" src="https://kazimullah.com/wp-content/uploads/2024/04/Being-a-Freelancing-in-Pakistan-1.png" alt="Ecommerce analytics">
+                        </div>
+                    </div>
+                    <div class="order-2 md:order-2">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                            <span class="text-blue-600">E‑commerce</span> <span class="text-teal-500">Growth</span> Setup
+                        </h1>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">Launch and scale your online store with optimized product pages, fast checkout systems, and conversion-focused ecommerce strategies that turn visitors into loyal customers.</p>
+                        <a href="ecommerceGrowth.html" class="inline-flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all border border-blue-200 rounded-full px-6 py-2 hover:bg-blue-50">Learn More <i class="fas fa-arrow-right text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= NEW SERVICE 4: Technical SEO & Performance Fix (text left, image right) ========= -->
+        <section class="bg-soft-gray py-12 md:py-16">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div class="order-2 md:order-1">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                            <span class="text-blue-600">Technical SEO</span> <span class="text-teal-500">& Performance</span> Fix
+                        </h1>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">Improve your website speed, technical SEO structure, and search visibility to achieve higher rankings and better user experience. We fix Core Web Vitals and more.</p>
+                        <a href="seoService.html" class="inline-flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all border border-blue-200 rounded-full px-6 py-2 hover:bg-blue-50">Learn More <i class="fas fa-arrow-right text-sm"></i></a>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div class="rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center h-64 md:h-80">
+                            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SEO analytics dashboard">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES PREVIEW CARDS (unchanged) -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4 md:px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our <span class="text-teal-500">expertise</span></h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="service-card bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <i class="fab fa-wordpress text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">WordPress Dev & Opt.</h3>
+                        <p class="text-gray-500 text-sm mb-4">Custom themes, plugins, speed optimization & secure sites.</p>
+                        <a href="wordpressDev.html" class="text-teal-600 font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">Learn more <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="service-card bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg">
+                        <i class="fab fa-whatsapp text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">WhatsApp & Booking</h3>
+                        <p class="text-gray-500 text-sm mb-4">Automated replies, booking flows, and chat integration.</p>
+                        <a href="whatsappAuto.html" class="text-teal-600 font-medium inline-flex items-center gap-1 hover:gap-2">Learn more <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="service-card bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg">
+                        <i class="fas fa-chart-line text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">E‑commerce Growth</h3>
+                        <p class="text-gray-500 text-sm mb-4">Scalable stores, conversion optimization & management.</p>
+                        <a href="ecommerceGrowth.html" class="text-teal-600 font-medium inline-flex items-center gap-1 hover:gap-2">Learn more <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="service-card bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg">
+                        <i class="fas fa-search text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Technical SEO & Fix</h3>
+                        <p class="text-gray-500 text-sm mb-4">Performance audits, Core Web Vitals, and site structure.</p>
+                        <a href="seoService.html" class="text-teal-600 font-medium inline-flex items-center gap-1 hover:gap-2">Learn more <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SECTION (unchanged) -->
+       <section class="bg-soft-gray py-16">
+  <div class="container mx-auto px-4 md:px-6">
+
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+      Recent <span class="text-blue-600">Projects</span>
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+        
+        <div class="h-44 overflow-hidden">
+          <img src="https://market-resized.envatousercontent.com/themeforest.net/files/657679704/cakebakery-previews/01-theme-preview.__large_preview.jpg?auto=format&q=94&cf_fit=crop&gravity=top&h=8000&w=590&s=66a9942781889686e9e0e8adf1b7814dc9476267b8289bc80dc587ecf05ce8fc"
+          class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="">
+        </div>
+
+        <div class="p-5">
+          <h3 class="text-xl font-semibold">Artisan Bakery</h3>
+          <p class="text-sm text-gray-500 mb-3">E-commerce / WordPress</p>
+          <a href="#" class="text-blue-600 text-sm font-medium flex items-center gap-1">
+            View project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+
+        <div class="h-44 overflow-hidden">
+          <img src="https://i.ytimg.com/vi/D2u70KKvyS8/hq720.jpg"
+          class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="">
+        </div>
+
+        <div class="p-5">
+          <h3 class="text-xl font-semibold">MediCare Connect</h3>
+          <p class="text-sm text-gray-500 mb-3">WhatsApp automation</p>
+          <a href="#" class="text-blue-600 text-sm font-medium flex items-center gap-1">
+            View project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+
+        <div class="h-44 overflow-hidden">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_ZOJRAvv-dfiuD9PvGmVGEREfVgLQJEFY4A&s"
+          class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="">
+        </div>
+
+        <div class="p-5">
+          <h3 class="text-xl font-semibold">GreenShop</h3>
+          <p class="text-sm text-gray-500 mb-3">E-commerce growth</p>
+          <a href="#" class="text-blue-600 text-sm font-medium flex items-center gap-1">
+            View project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+
+        <div class="h-44 overflow-hidden">
+          <img src="https://rankmath.com/wp-content/uploads/2025/05/SEO-for-Startups.png"
+          class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="">
+        </div>
+
+        <div class="p-5">
+          <h3 class="text-xl font-semibold">StartupHub</h3>
+          <p class="text-sm text-gray-500 mb-3">SEO & performance</p>
+          <a href="#" class="text-blue-600 text-sm font-medium flex items-center gap-1">
+            View project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+
+        <div class="h-44 overflow-hidden">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGpnbp_cHYFNcvRnnmvCHGhx5VgUB7ywbI1Q&s"
+          class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="">
+        </div>
+
+        <div class="p-5">
+          <h3 class="text-xl font-semibold">LawOffice WP</h3>
+          <p class="text-sm text-gray-500 mb-3">WordPress optimization</p>
+          <a href="#" class="text-blue-600 text-sm font-medium flex items-center gap-1">
+            View project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+
+        <div class="h-44 overflow-hidden">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOBebCuI4EYVG-senmiDluJmsC3Iq6XayJew&s"
+          class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="">
+        </div>
+
+        <div class="p-5">
+          <h3 class="text-xl font-semibold">TravelEase</h3>
+          <p class="text-sm text-gray-500 mb-3">Booking automation</p>
+          <a href="#" class="text-blue-600 text-sm font-medium flex items-center gap-1">
+            View project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+        <!-- TESTIMONIALS SECTION (unchanged) -->
+        <section class="bg-white py-16 overflow-hidden">
+            <div class="container mx-auto px-4 md:px-6 mb-8">
+                <h2 class="text-3xl font-bold text-center text-gray-800">Client <span class="text-teal-500">love</span></h2>
+            </div>
+            <div class="flex gap-6 marquee-inline">
+                <!-- 10 testimonial cards (short version) -->
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center"><i class="fas fa-user text-blue-500"></i></div><div><h4 class="font-semibold">Emily R.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div></div><p class="text-sm text-gray-600 break-words">“They rebuilt our WP site in 3 days. Speed improved 200%!”</p></div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center"><i class="fas fa-user text-teal-500"></i></div><div><h4 class="font-semibold">Mark T.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div></div><p class="text-sm text-gray-600 break-words">“WhatsApp automation saved us 10h/week. Absolutely brilliant.”</p></div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center"><i class="fas fa-user text-blue-500"></i></div><div><h4 class="font-semibold">Sarah K.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div></div><p class="text-sm text-gray-600 break-words">“E‑commerce revenue increased 40% after their optimization.”</p></div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center"><i class="fas fa-user text-teal-500"></i></div><div><h4 class="font-semibold">David L.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div></div><p class="text-sm text-gray-600 break-words">“Technical SEO fixes brought us to page 1 on Google.”</p></div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center"><i class="fas fa-user text-blue-500"></i></div><div><h4 class="font-semibold">Nina P.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div></div><p class="text-sm text-gray-600 break-words">“Very happy with the custom WordPress design. Fast & reliable.”</p></div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center"><i class="fas fa-user text-teal-500"></i></div><div><h4 class="font-semibold">Omar F.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div></div><p class="text-sm text-gray-600 break-words">“Booking automation cut no-shows by 60%.”</p></div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center"><i class="fas fa-user text-blue-500"></i></div><div><h4 class="font-semibold">Jasmine W.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div></div><p class="text-sm text-gray-600 break-words">“They fixed all our plugin conflicts and site is stable.”</p></div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center"><i class="fas fa-user text-teal-500"></i></div><div><h4 class="font-semibold">Greg S.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div></div><p class="text-sm text-gray-600 break-words">“Page speed went from 45 to 95 on mobile. Amazing.”</p></div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center"><i class="fas fa-user text-blue-500"></i></div><div><h4 class="font-semibold">Linda H.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div></div><p class="text-sm text-gray-600 break-words">“Perfect communication and delivered ahead of time.”</p></div>
+                <div class="testimonial-card flex-shrink-0 w-72 bg-white rounded-xl p-5 shadow-md border"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center"><i class="fas fa-user text-teal-500"></i></div><div><h4 class="font-semibold">Carlos M.</h4><div class="text-yellow-400 text-xs">★★★★★</div></div></div><p class="text-sm text-gray-600 break-words">“Security hardening gave us peace of mind. Highly recommend.”</p></div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION (unchanged) -->
+        <section class="bg-gradient-to-r from-blue-50 to-teal-50 py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Ready to Grow Your Business Online?</h2>
+                <a href="#" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-medium py-3 px-10 rounded-full shadow-md transition">Start Your Project</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (unchanged) -->
+    <footer class="bg-white border-t border-gray-200 pt-12 pb-6">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex justify-center space-x-5 text-gray-500 mb-10">
+                <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-teal-500"><i class="fab fa-linkedin-in text-xl"></i></a>
+                <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-600">
+                <div><h4 class="font-semibold text-gray-800 mb-4">Popular Posts</h4><ul class="space-y-2"><li><a href="#" class="hover:text-blue-600">10 WordPress speed tips</a></li><li><a href="#" class="hover:text-blue-600">WhatsApp for business 2025</a></li><li><a href="#" class="hover:text-blue-600">E‑commerce SEO guide</a></li><li><a href="#" class="hover:text-blue-600">Why site security matters</a></li></ul></div>
+                <div><h4 class="font-semibold text-gray-800 mb-4">Useful Information</h4><ul class="grid grid-cols-2 gap-x-4 gap-y-2"><li><a href="#" class="hover:text-blue-600">Tech</a></li><li><a href="#" class="hover:text-blue-600">Lifestyle</a></li><li><a href="#" class="hover:text-blue-600">Health & Fitness</a></li><li><a href="#" class="hover:text-blue-600">Online Learning</a></li><li><a href="#" class="hover:text-blue-600">Money & Business</a></li><li><a href="#" class="hover:text-blue-600">About Us</a></li><li><a href="#" class="hover:text-blue-600">Contact</a></li></ul></div>
+                <div><h4 class="font-semibold text-gray-800 mb-4">Contact Info</h4><ul class="space-y-3"><li class="flex items-start gap-3"><i class="fas fa-map-marker-alt w-5 text-blue-500 mt-1"></i> 123 Business Ave, Suite 100</li><li class="flex items-start gap-3"><i class="fas fa-phone-alt w-5 text-teal-500"></i> +1 (555) 123-4567</li><li class="flex items-start gap-3"><i class="fas fa-envelope w-5 text-blue-500"></i> hello@digipro.demo</li><li class="flex items-start gap-3"><i class="fas fa-globe w-5 text-teal-500"></i> www.digipro.demo</li></ul></div>
+            </div>
+            <div class="border-t border-gray-100 mt-12 pt-6 flex flex-col sm:flex-row justify-between text-xs text-gray-500"><span>© 2025 DigiPro. All rights reserved.</span><div class="flex gap-5 mt-2 sm:mt-0"><a href="#" class="hover:text-blue-600">Terms & Conditions</a><a href="#" class="hover:text-blue-600">Privacy Policy</a></div></div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
